@@ -146,7 +146,7 @@ def login():
         user = User.query.filter_by(mail_address=email).first()
         if user and check_password_hash(user.password, password):
             login_user(user)
-            flash('ログイン成功しました！', 'success')
+            flash('ログイン成功しました。！', 'success')
             return redirect(url_for('Home'))
         else:
             flash('ログインに失敗しました。再度ログインを実行してください', 'danger')
