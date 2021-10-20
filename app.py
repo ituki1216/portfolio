@@ -132,7 +132,7 @@ def signup():
             return redirect(url_for('login'))
         except Exception as e:
             db.session.rollback()
-            flash('登録中にエラーが発生しました。もう一度お試しください。', 'error')
+            flash('登録中にエラーが発生しました。もう一度お試しください', 'error')
             return render_template('register_rewords/signup.html')
 
     return render_template('register_rewords/signup.html')
